@@ -5,7 +5,7 @@ namespace NovoNordisk.Configuration.AzureBlob;
 
 public class BlobJsonConfigurationSource : IConfigurationSource
 {
-    public required string BlobUrl { get; init; }
+    public required Uri BlobUrl { get; init; }
     public bool ReloadOnChange { get; init; } = false;
     public TimeSpan PollingInterval { get; init; } = TimeSpan.FromSeconds(30);
     public Action<Exception>? ExceptionHandler { get; init; }

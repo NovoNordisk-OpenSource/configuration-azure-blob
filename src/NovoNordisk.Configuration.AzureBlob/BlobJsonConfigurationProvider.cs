@@ -72,7 +72,7 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
     
     private BlobClient GetBlobClient()
     {
-        return new BlobClient(new Uri(_source.BlobUrl), _source.Credential);
+        return new BlobClient(_source.BlobUrl, _source.Credential);
     }
 
     public void Dispose()
