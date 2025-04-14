@@ -4,12 +4,38 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
+        <Title>Azure Blob Storage Configuration Provider</Title>
+        <Company>Novo Nordisk A/S</Company>
+        <Description>A Configuration Provider for files from Azure Blob Storage</Description>
+        <Authors>Novo Nordisk Digital Products and Software Engineering</Authors>
+        <RepositoryUrl>https://github.com/NovoNordisk-OpenSource/configuration-azure-blob</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/NovoNordisk-OpenSource/configuration-azure-blob</PackageProjectUrl>
+        <PackageId>NovoNordisk.Configuration.AzureBlob</PackageId>
+        <PackageTags>Configuration Azure AzureBlob</PackageTags>
+        <PackageReleaseNotes>https://github.com/NovoNordisk-OpenSource/configuration-azure-blob/releases</PackageReleaseNotes>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Copyright>Novo Nordisk A/S</Copyright>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Azure.Core" Version="1.45.0" />
       <PackageReference Include="Azure.Storage.Blobs" Version="12.24.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../../README.md">
+            <Pack>True</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../../CHANGELOG.md">
+            <Pack>True</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
     </ItemGroup>
 
 </Project>

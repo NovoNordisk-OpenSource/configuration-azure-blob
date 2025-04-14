@@ -57,3 +57,8 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## References
+- [Morteza Mousavi - A Refreshable SQL Server Configuration Provider for .NET Core](https://mousavi310.github.io/posts/a-refreshable-sql-server-configuration-provider-for-net-core/)
+- [qinezh - Microsoft.Extensions.Configuration.AzureBlob](https://github.com/qinezh/Microsoft.Extensions.Configuration.AzureBlob)
+- [MilestoneTG - extensions-configuration-s3](https://github.com/milestonetg/extensions-configuration-s3)
