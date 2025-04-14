@@ -5,6 +5,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{FFEF83B2-D69F-4F06-9D6B-11DFFD26C4D7}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = ../README.md
+		CHANGELOG.md = ../CHANGELOG.md
 	EndProjectSection
 EndProject
 Global
