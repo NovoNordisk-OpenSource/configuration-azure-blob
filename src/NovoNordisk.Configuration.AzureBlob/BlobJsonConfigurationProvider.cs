@@ -31,6 +31,7 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
         var client = GetBlobClient();
         using var stream = new MemoryStream();
         using var response = await client.DownloadToAsync(stream);
+        stream.Seek(0, SeekOrigin.Begin);
 
         if (!response.IsError)
         {
