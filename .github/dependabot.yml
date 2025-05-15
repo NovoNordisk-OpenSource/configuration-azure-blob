@@ -5,6 +5,4 @@ updates:
     schedule:
       interval: "weekly"
     assignees:
-      - "simon-k"
-    reviewers:
-      - "simon-k"
+      - "NiklasHansen"
