@@ -1,0 +1,4 @@
+# CODEOWNERS
+
+*         @NovoNordisk-OpenSource/configuration-azureblob
+/.github/ @NovoNordisk-OpenSource/configuration-azureblob-admins
