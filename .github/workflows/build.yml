@@ -31,4 +31,4 @@ jobs:
         run: dotnet test src --no-build --verbosity normal
 
       - name: Package
-        run: dotnet pack src/NovoNordisk.CriticalPath -c Release
+        run: dotnet pack src/NovoNordisk.Configuration.AzureBlob -c Release
