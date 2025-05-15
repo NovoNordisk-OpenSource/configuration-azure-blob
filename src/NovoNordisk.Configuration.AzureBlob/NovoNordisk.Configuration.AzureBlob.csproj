@@ -16,6 +16,11 @@
         <PackageReleaseNotes>https://github.com/NovoNordisk-OpenSource/configuration-azure-blob/releases</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <Copyright>Novo Nordisk A/S</Copyright>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\NovoNordisk.Configuration.AzureBlob.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
