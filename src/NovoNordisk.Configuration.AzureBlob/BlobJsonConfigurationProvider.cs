@@ -4,6 +4,14 @@ using Microsoft.Extensions.Configuration;
 
 namespace NovoNordisk.Configuration.AzureBlob;
 
+/// <summary>
+/// Configuration provider for loading JSON configuration data from Azure Blob Storage.
+/// </summary>
+/// <remarks>
+/// This provider can reload configuration when the blob content changes by polling
+/// the blob at regular intervals. It handles ETag-based change detection to minimize
+/// unnecessary downloads.
+/// </remarks>
 public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable, IAsyncDisposable
 {
     private readonly BlobJsonConfigurationSource _source;
@@ -11,6 +19,10 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
     private ETag? _etag;
     private int _reloadInProgress;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BlobJsonConfigurationProvider"/> class.
+    /// </summary>
+    /// <param name="source">The blob configuration source containing connection details and settings.</param>
     public BlobJsonConfigurationProvider(BlobJsonConfigurationSource source)
     {
         _source = source;
@@ -21,6 +33,9 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
         }
     }
     
+    /// <summary>
+    /// Loads (or reloads) the data for this provider.
+    /// </summary>
     public override void Load()
     {
         LoadAsync().GetAwaiter().GetResult();
@@ -76,11 +91,17 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
         return new BlobClient(_source.BlobUrl, _source.Credential);
     }
 
+    /// <summary>
+    /// Disposes the resources used by this configuration provider.
+    /// </summary>
     public void Dispose()
     {
         _timer?.Dispose();
     }
 
+    /// <summary>
+    /// Disposes the resources used by this configuration provider.
+    /// </summary>
     public async ValueTask DisposeAsync()
     {
         if (_timer != null) await _timer.DisposeAsync();
