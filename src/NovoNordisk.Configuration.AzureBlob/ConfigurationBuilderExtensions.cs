@@ -3,6 +3,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace NovoNordisk.Configuration.AzureBlob;
 
+/// <summary>
+/// Extension methods for adding <see cref="BlobJsonConfigurationProvider"/>.
+/// </summary>
 public static class ConfigurationBuilderExtensions
 {
     /// <summary>
