@@ -16,7 +16,7 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
 {
     private readonly BlobJsonConfigurationSource _source;
     private readonly Timer? _timer;
-    private ETag? _etag;
+    private string? _etag;
     private int _reloadInProgress;
 
     /// <summary>
@@ -51,7 +51,7 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
         if (!response.IsError)
         {
             Data = JsonConfigurationFileParser.Parse(stream);
-            _etag = response.Headers.ETag;
+            _etag = response.Headers.ETag.ToString()?.Trim('"');
             
             OnReload();
         }
@@ -70,7 +70,7 @@ public class BlobJsonConfigurationProvider : ConfigurationProvider, IDisposable,
                     throw new RequestFailedException("Failed to retrieve blob properties");
                 }
 
-                if (_etag != props.Value.ETag)
+                if (_etag != props.Value.ETag.ToString().Trim('"'))
                 {
                     await LoadAsync();
                 }
