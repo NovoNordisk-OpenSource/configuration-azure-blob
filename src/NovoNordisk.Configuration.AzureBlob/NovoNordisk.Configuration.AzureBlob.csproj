@@ -15,6 +15,7 @@
         <PackageTags>Configuration Azure AzureBlob</PackageTags>
         <PackageReleaseNotes>https://github.com/NovoNordisk-OpenSource/configuration-azure-blob/releases</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Copyright>Novo Nordisk A/S</Copyright>
         <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     </PropertyGroup>

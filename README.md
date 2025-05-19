@@ -1,12 +1,19 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![NuGet Downloads](https://img.shields.io/nuget/dt/NovoNordisk.Configuration.AzureBlob?logo=nuget)
+![NuGet Version](https://img.shields.io/nuget/v/NovoNordisk.Configuration.AzureBlob?logo=nuget)
+
 # Azure Blob Storage Configuration Provider
+
 This is a configuration provider for the built-in [Configuration API](https://learn.microsoft.com/en-us/dotnet/core/extensions/configuration), for reading JSON configuration files from Azure Blob Storage.
 
 Features:
+
 - Authentication via Azure token credential
 - Reloadable config, with adjustable cadence
 - Invoke `Action` on exception
 
 ## Installation
+
 You can install the library via NuGet:
 
 ```bash
@@ -14,6 +21,7 @@ dotnet add package NovoNordisk.Configuration.AzureBlob
 ```
 
 ## Usage
+
 To get started, all you need is the URL for the specific blob you want to load.
 
 ```csharp
@@ -53,12 +61,15 @@ configurationBuilder.AddJsonBlob(blobUrl, exceptionHandler: exception =>
 ```
 
 ## Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## References
+
 - [Morteza Mousavi - A Refreshable SQL Server Configuration Provider for .NET Core](https://mousavi310.github.io/posts/a-refreshable-sql-server-configuration-provider-for-net-core/)
 - [qinezh - Microsoft.Extensions.Configuration.AzureBlob](https://github.com/qinezh/Microsoft.Extensions.Configuration.AzureBlob)
 - [MilestoneTG - extensions-configuration-s3](https://github.com/milestonetg/extensions-configuration-s3)
