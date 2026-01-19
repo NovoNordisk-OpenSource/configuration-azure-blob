@@ -27,7 +27,7 @@
     <ItemGroup>
       <PackageReference Include="Azure.Core" Version="1.47.2" />
       <PackageReference Include="Azure.Storage.Blobs" Version="12.25.0" />
-      <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
     </ItemGroup>
 
     <ItemGroup>
